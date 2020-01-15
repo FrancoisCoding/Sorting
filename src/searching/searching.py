@@ -21,6 +21,15 @@ def binary_search(arr, target):
     high = len(arr)-1
 
     # TO-DO: add missing code
+    while low <= high:
+        # Receive integer value
+        mid = (low+high) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            low = mid
+        else:
+            high = mid
 
     return -1  # not found
 
